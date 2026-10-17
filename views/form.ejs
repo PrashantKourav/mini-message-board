@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Message</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Write a Message</h1>
+    <p class="subtitle">Share something with the board.</p>
+
+    <form action="/new" method="POST" class="message-form">
+      <label for="author">Your name</label>
+      <input
+        type="text"
+        id="author"
+        name="messageUser"
+        placeholder="Enter your name"
+        required
+      >
+
+      <label for="message">Your message</label>
+      <textarea
+        id="message"
+        name="messageText"
+        placeholder="Write your message..."
+        rows="5"
+        required
+      ></textarea>
+
+      <button type="submit" class="new-message-btn">
+        Post Message
+      </button>
+    </form>
+
+    <a class="back-link" href="/">← Back to messages</a>
+  </main>
+</body>
+</html>

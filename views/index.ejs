@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1><%= title %></h1>
+    <p class="subtitle">A little place to share your thoughts.</p>
+
+    <a class="new-message-btn" href="/new">+ New Message</a>
+
+    <section class="messages">
+      <% messages.forEach((message, index) => { %>
+        <article class="message-card">
+          <h2><%= message.user %></h2>
+          <p><%= message.text %></p>
+
+          <small>
+            Added: <%= message.added.toLocaleString() %>
+          </small>
+
+          <a class="open-link" href="/message/<%= index %>">
+            Open message →
+          </a>
+        </article>
+      <% }) %>
+    </section>
+  </main>
+</body>
+</html>
